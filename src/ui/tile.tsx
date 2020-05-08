@@ -1,0 +1,48 @@
+import * as React from "react";
+import styled from "@emotion/styled";
+import { TileState } from "../logic/tile";
+
+const UIStyledTile = styled.button<{
+    borderColor: string;
+}>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid ${ props => props.borderColor };
+  font-family: monospace;
+  font-size: 21px;
+  font-weight: bold;
+  color: #1d526c;
+`;
+
+const UITile = (props: {
+    value: number;
+    isVisible: boolean;
+    state: TileState;
+    onClick: () => void;
+}) => {
+    const borderColor = () => {
+        switch (props.state) {
+            case TileState.default:
+                return "#a5dff9";
+            case TileState.right:
+                return "#60c5ba";
+            case TileState.wrong:
+                return "#ef5285";
+        }
+    };
+
+    return (
+        <UIStyledTile
+            borderColor={ borderColor() }
+            onClick={ props.onClick }
+        >
+            { props.isVisible
+                ? props.value
+                : ""
+            }
+        </UIStyledTile>
+    );
+};
+
+export default UITile;
