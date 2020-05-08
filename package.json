@@ -1,7 +1,9 @@
 {
   "name": "memory-game",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "dev": "node_modules/.bin/parcel src/index.html"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/albemala/memory-game.git"
@@ -10,6 +12,7 @@
   "dependencies": {
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.2",
+    "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "tslib": "^1.11.2"
