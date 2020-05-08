@@ -1,6 +1,6 @@
 import GameConstants from "./game-constants";
-import Tile, {TileState} from "./tile";
-import {observable} from "mobx";
+import Tile, { TileState } from "./tile";
+import { observable } from "mobx";
 
 class GameManager {
 
@@ -30,6 +30,7 @@ class GameManager {
     onTileClick = (tile: Tile) => {
         if (!this.canClick) { return; }
         if (tile.state == TileState.right) { return; } // ignore clicks when tile already matched
+        if (tile == this.selectedTiles[0] || tile == this.selectedTiles[1]) { return; } // you can't click the same tile twice
         tile.isVisible = true;
         if (this.selectedTiles.length === 0) {
             this.selectedTiles.push(tile);
