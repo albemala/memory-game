@@ -9,10 +9,12 @@ const UIStyledTile = styled.button<{
   justify-content: center;
   align-items: center;
   border: 1px solid ${ props => props.borderColor };
+  border-radius: 3px;
   font-family: monospace;
   font-size: 21px;
   font-weight: bold;
   color: #1d526c;
+  background: white;
 `;
 
 const UITile = (props: {
@@ -24,9 +26,9 @@ const UITile = (props: {
     const borderColor = () => {
         switch (props.state) {
             case TileState.default:
-                return "#a5dff9";
+                return "#b8e5fc";
             case TileState.right:
-                return "#60c5ba";
+                return "#4db8ac";
             case TileState.wrong:
                 return "#ef5285";
         }

@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import App from "./ui/app";
+import UIApp from "./ui/app";
 
 ReactDOM.render(
-    <App/>,
+    <UIApp/>,
     document.getElementById("root"),
 );

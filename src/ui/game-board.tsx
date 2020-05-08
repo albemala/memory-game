@@ -5,6 +5,8 @@ import styled from "@emotion/styled";
 import GameConstants from "../logic/game-constants";
 import {observer} from "mobx-react";
 import Tile from "../logic/tile";
+import UIVictoryText from "./victory-text";
+import UIButton from "./button";
 
 const UITilesContainer = styled.div`
   display: grid;
@@ -32,12 +34,13 @@ class UIGameBoard extends React.Component {
             )
             : (
                 <div>
-                    <div>You win!</div>
-                    <button
+                    <UIVictoryText>You win!</UIVictoryText>
+
+                    <UIButton
                         onClick={this.gameManager.startNewGame}
                     >
                         Start new game
-                    </button>
+                    </UIButton>
                 </div>
             );
     }
