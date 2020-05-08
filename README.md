@@ -21,7 +21,7 @@ Parcel.js works out of the box, without any configuration needed.
 I decided to use Typescript to support type checking.
 
 I understand my choices don't necessarily work for more complex applications, 
-but I decided to go for speed and simplicity for this project.
+but I've decided to go for speed and simplicity for this project.
 
 ## What's missing
 
